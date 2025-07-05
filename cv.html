@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV | Haleem Halar</title>
@@ -8,18 +10,18 @@
 </head>
 <body>
   <header class="main-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
+   <ul>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="education.html" class="nav-link">Education</a></li>
+    <li><a href="experience.html" class="nav-link">Experience</a></li>
+    <li><a href="research.html" class="nav-link">Research</a></li>
+    <li><a href="publications.html" class="nav-link">Publications</a></li>
+    <li><a href="cv.html" class="nav-link">CV</a></li>
+   </ul>
   </header>
 
   <div class="container">
-    <section class="intro">
+    <section class="intro" data-aos="fade-up">
       <h1>Curriculum Vitae</h1>
       <p>Thank you for your interest in my work. You can download my detailed CV below.</p>
       <a href="CV.pdf" target="_blank" class="btn-download">Download CV (PDF)</a>
@@ -29,5 +31,25 @@
   <footer>
     <p>&copy; 2025 Haleem Halar</p>
   </footer>
+<script>
+  // Highlight the current page link
+  const navLinks = document.querySelectorAll('.main-nav ul li a');
+  const currentPath = window.location.pathname.split('/').pop();
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+</script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
 </body>
 </html>
