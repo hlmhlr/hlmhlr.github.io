@@ -1,90 +1,131 @@
+# Preparing the required sample HTML structure for the enhanced home page
+from IPython.display import HTML
+
+html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haleem Halar | Developer & Researcher</title>
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- Font Awesome CDN (No Kit Needed) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #00acc1;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 1.5rem;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0077b5;
+      transform: scale(1.2);
+    }
+    .quick-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    .stat {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: #ffffff;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .motto {
+      text-align: center;
+      font-style: italic;
+      margin: 2rem;
+      font-size: 1.1rem;
+      color: #666;
+    }
+    .scroll-down {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .scroll-down i {
+      font-size: 2rem;
+      color: #999;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Navigation Bar -->
-  <header class="main-nav">
-    <ul>
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="education.html" class="nav-link">Education</a></li>
-      <li><a href="experience.html" class="nav-link">Experience</a></li>
-      <li><a href="research.html" class="nav-link">Research</a></li>
-      <li><a href="publications.html" class="nav-link">Publications</a></li>
-      <li><a href="cv.html" class="nav-link">CV</a></li>
-    </ul>
-  </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <section class="intro" data-aos="fade-up">
-      <img src="profile.jpg" alt="Haleem Halar" class="profile-pic" style="width: 150px; border-radius: 50%; margin-bottom: 1rem;">
-      <h1>Haleem Halar</h1>
-      <p class="tagline">Developer & Researcher in Machine Learning, NLP, and AI Ethics</p>
-      <p>
-        I am a computer science researcher passionate about solving real-world problems using cutting-edge machine learning and natural language processing.
-        I also explore responsible AI practices and interdisciplinary research.
-      </p>
-    </section>
-
-    <section class="contact" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:haleem@example.com">halarhaleem@gmail.com</a></p>
-      <p>Location: Genova, Italy</p>
-
-      <div class="social-icons">
-        <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar">
-          <i class="fas fa-graduation-cap"></i> 
-        </a>
-        <a href="https://github.com" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://orcid.org" target="_blank" aria-label="ORCID">
-          <i class="fas fa-globe"></i>
-        </a>
-      </div>
-    </section>
+<section class="hero" data-aos="fade-down">
+  <img src="profile.jpg" alt="Haleem Halar" class="profile-pic" />
+  <h1>Haleem Halar</h1>
+  <p class="tagline">Developer & Researcher in Machine Learning, NLP, and AI Ethics</p>
+  <div class="social-icons">
+    <a href="#"><i class="fas fa-graduation-cap" title="Google Scholar"></i></a>
+    <a href="#"><i class="fab fa-github" title="GitHub"></i></a>
+    <a href="#"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+    <a href="#"><i class="fab fa-orcid" title="ORCID"></i></a>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Haleem Halar</p>
-  </footer>
+<section class="quick-stats" data-aos="fade-up">
+  <div class="stat">12+<br/>Publications</div>
+  <div class="stat">6+<br/>Years Experience</div>
+  <div class="stat">20+<br/>GitHub Projects</div>
+  <div class="stat">3<br/>Degrees</div>
+</section>
 
-  <!-- Active Nav Highlight Script -->
-  <script>
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
-    const currentPath = window.location.pathname.split('/').pop();
+<div class="motto" data-aos="fade-up">
+  “Advancing AI for good — responsibly and ethically.”
+</div>
 
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.classList.add('active');
-      }
-    });
-  </script>
+<div class="scroll-down">
+  <i class="fas fa-chevron-down"></i>
+</div>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 </body>
 </html>
+"""
+
+HTML(html_content)
