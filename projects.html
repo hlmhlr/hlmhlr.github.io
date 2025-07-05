@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Haleem Halar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- Loader (optional) -->
+  <div id="loader"></div>
+
+  <!-- Navigation -->
+  <header class="main-nav">
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="education.html" class="nav-link">Education</a></li>
+      <li><a href="experience.html" class="nav-link">Experience</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li><a href="cv.html" class="nav-link">CV</a></li>
+      <li><button id="themeToggle">🌓 Mode</button></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <section class="intro" data-aos="fade-up">
+      <h1>Projects</h1>
+      <p>Below are some selected projects showcasing my work in AI, computer vision, and embedded systems.</p>
+    </section>
+
+    <section class="intro" data-aos="fade-up">
+      <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+        <li>
+          <i class="fas fa-robot" style="margin-right: 0.5rem; color: #00acc1;"></i>
+          <strong>Smart Surveillance System</strong> – Real-time object detection with YOLOv5 on Jetson Nano.
+        </li>
+        <li>
+          <i class="fas fa-heartbeat" style="margin-right: 0.5rem; color: #e74c3c;"></i>
+          <strong>eHealth Monitoring</strong> – Wearable sensors + AI for elderly fall detection and activity recognition.
+        </li>
+        <li>
+          <i class="fas fa-satellite" style="margin-right: 0.5rem; color: #9b59b6;"></i>
+          <strong>Satellite Image Classification</strong> – Land cover mapping using deep learning.
+        </li>
+        <li>
+          <i class="fas fa-code-branch" style="margin-right: 0.5rem; color: #2980b9;"></i>
+          <strong>Edge AI Deployment</strong> – Optimized CNN models deployed on embedded hardware.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Haleem Halar</p>
+  </footer>
+
+  <!-- Active Link -->
+  <script>
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+    const currentPath = window.location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Dark Mode Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById('themeToggle');
+
+      // Load theme from localStorage
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    });
+  </script>
+
+  <!-- AOS Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  </script>
+
+  <!-- Loader Fade (if used) -->
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>
