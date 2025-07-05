@@ -372,6 +372,32 @@ body.dark-mode .social-icons a:hover {
   color: #00e0ff !important;
 }
 
+/* Dark mode styling for News section */
+body.dark-mode .news {
+  background-color: #222 !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .news h2 {
+  color: #90caf9 !important;
+}
+
+body.dark-mode .news ul li {
+  color: #ddd !important;
+}
+
+body.dark-mode .news ul li strong {
+  color: #64b5f6 !important;
+}
+
+body.dark-mode .news ul li a {
+  color: #90caf9 !important;
+}
+
+body.dark-mode .news ul li a:hover {
+  color: #bbdefb !important;
+}
+
 
 .news ul li strong {
   color: #0077b5;
