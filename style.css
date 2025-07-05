@@ -328,3 +328,46 @@ body.dark-mode #themeToggle {
   color: #fff;
   border: 1px solid #555;
 }
+
+/* === DARK MODE FIX (TEXT + ICONS VISIBILITY) === */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .intro,
+body.dark-mode .contact,
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .main-nav a {
+  color: #ddd !important;
+}
+
+body.dark-mode .main-nav a.active {
+  color: #00e0ff !important;
+}
+
+body.dark-mode .profile-pic {
+  border: 4px solid #00e0ff;
+  box-shadow: 0 0 10px #00e0ff44;
+}
+
+body.dark-mode .social-icons a {
+  color: #cccccc !important;
+}
+
+body.dark-mode .social-icons a:hover {
+  color: #00e0ff !important;
+}
