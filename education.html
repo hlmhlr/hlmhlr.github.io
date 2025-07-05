@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Education | Haleem Halar</title>
-
-  <!-- Styles & AOS -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-  <!-- Navigation Bar -->
   <header class="main-nav">
-    <ul>
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="education.html" class="nav-link">Education</a></li>
-      <li><a href="experience.html" class="nav-link">Experience</a></li>
-      <li><a href="research.html" class="nav-link">Research</a></li>
-      <li><a href="publications.html" class="nav-link">Publications</a></li>
-      <li><a href="cv.html" class="nav-link">CV</a></li>
-    </ul>
-  </header>
+  <ul>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="education.html" class="nav-link">Education</a></li>
+    <li><a href="experience.html" class="nav-link">Experience</a></li>
+    <li><a href="research.html" class="nav-link">Research</a></li>
+    <li><a href="publications.html" class="nav-link">Publications</a></li>
+    <li><a href="cv.html" class="nav-link">CV</a></li>
+  </ul>
+</header>
 
-  <!-- Main Content -->
   <div class="container">
-    <section class="page-section" data-aos="fade-up">
+    <section class="intro">
       <h1>Education</h1>
-      <ul>
-        <li><strong>Ph.D. in Computer Science</strong> — University of Example (2020–2024)</li>
-        <li><strong>M.Sc. in Software Engineering</strong> — Example Tech University (2017–2019)</li>
-        <li><strong>B.Sc. in Computer Science</strong> — City College (2013–2017)</li>
-      </ul>
+      <p>Here’s an overview of my academic background and qualifications.</p>
+    </section>
+
+    <section class="contact" data-aos="fade-up">
+      <h2>Ph.D. in Computer Science</h2>
+      <p><strong>University Name</strong><br>
+      2019 – 2024<br>
+      Dissertation: Deep Learning for Multimodal Text Understanding</p>
+
+      <h2>M.Sc. in Software Engineering</h2>
+      <p><strong>Another University</strong><br>
+      2016 – 2018<br>
+      Thesis: Semantic Similarity in Educational Content</p>
+
+      <h2>B.Sc. in Computer Science</h2>
+      <p><strong>University Name</strong><br>
+      2012 – 2016</p>
     </section>
   </div>
+  
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Haleem Halar</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Highlight current page in nav
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
-    const currentPath = window.location.pathname.split('/').pop();
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.classList.add('active');
-      }
-    });
-  </script>
+<script>
+  // Highlight the current page link
+  const navLinks = document.querySelectorAll('.main-nav ul li a');
+  const currentPath = window.location.pathname.split('/').pop();
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  </script>
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+</script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
 </body>
 </html>
