@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haleem Halar | Developer & Researcher</title>
+
+  <!-- CSS Files -->
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a2e8c1d2e2.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN (No Kit Needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
+  <!-- Navigation Bar -->
   <header class="main-nav">
-  <ul>
-    <li><a href="index.html" class="nav-link">Home</a></li>
-    <li><a href="education.html" class="nav-link">Education</a></li>
-    <li><a href="experience.html" class="nav-link">Experience</a></li>
-    <li><a href="research.html" class="nav-link">Research</a></li>
-    <li><a href="publications.html" class="nav-link">Publications</a></li>
-    <li><a href="cv.html" class="nav-link">CV</a></li>
-  </ul>
-</header>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="education.html" class="nav-link">Education</a></li>
+      <li><a href="experience.html" class="nav-link">Experience</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li><a href="cv.html" class="nav-link">CV</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
   <div class="container">
-    <section class="intro">
+    <section class="intro" data-aos="fade-up">
       <img src="profile.jpg" alt="Haleem Halar" class="profile-pic" style="width: 150px; border-radius: 50%; margin-bottom: 1rem;">
       <h1>Haleem Halar</h1>
       <p class="tagline">Developer & Researcher in Machine Learning, NLP, and AI Ethics</p>
-      <p>I am a computer science researcher passionate about solving real-world problems with cutting-edge machine learning and natural language processing. I also explore responsible AI practices and interdisciplinary research.</p>
+      <p>
+        I am a computer science researcher passionate about solving real-world problems using cutting-edge machine learning and natural language processing.
+        I also explore responsible AI practices and interdisciplinary research.
+      </p>
     </section>
 
     <section class="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:haleem@example.com">haleem@example.com</a></p>
       <p>Location: City, Country</p>
+
       <div class="social-icons">
-        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" aria-label="Google Scholar">
+        <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar">
           <i class="fas fa-graduation-cap"></i> Google Scholar
         </a>
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" aria-label="GitHub">
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i> GitHub
         </a>
-        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://orcid.org/YOUR_ORCID" target="_blank" aria-label="ORCID">
+        <a href="https://orcid.org" target="_blank" aria-label="ORCID">
           <i class="fas fa-globe"></i> ORCID
         </a>
       </div>
     </section>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Haleem Halar</p>
   </footer>
-  <script>
-  // Highlight the current page link
-  const navLinks = document.querySelectorAll('.main-nav ul li a');
-  const currentPath = window.location.pathname.split('/').pop();
 
-  navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    }
-  });
-</script>
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-  });
-</script>
+  <!-- Active Nav Highlight Script -->
+  <script>
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+    const currentPath = window.location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
 </body>
 </html>
