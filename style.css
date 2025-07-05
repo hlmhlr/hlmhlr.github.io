@@ -236,3 +236,14 @@ body.dark-mode footer {
 .social-icons a:hover {
   color: #90caf9;
 }
+
+body.dark-mode .intro,
+body.dark-mode .intro h1,
+body.dark-mode .intro p {
+  color: #f1f1f1;
+}
+
+body.dark-mode .intro {
+  background-color: #222;
+}
+
