@@ -146,3 +146,20 @@ footer {
   color: #f5a623;
   border-bottom: 2px solid #f5a623;
 }
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f5a623; /* or any color you prefer */
+}
