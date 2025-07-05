@@ -373,3 +373,16 @@ body.dark-mode .social-icons a:hover {
 }
 
 
+.news ul li strong {
+  color: #0077b5;
+  margin-right: 0.5rem;
+}
+
+.news ul li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news ul li a:hover {
+  color: #005f8d;
+}
