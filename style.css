@@ -473,16 +473,8 @@ body.dark-mode .abstract-text {
 
 
 
-/* style for the news section  */
+/* --------------------style for the news section  */
 
-.news {
-  background-color: #e3e8ef;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  margin-bottom: 2rem;
-  max-height: 300px;
-}
 
 .news h2 {
   margin-bottom: 1rem;
