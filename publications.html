@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Haleem Halar</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .publication-list {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .publication-list li {
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .abstract-text {
+      display: none;
+      margin-top: 0.3rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    .abstract-toggle {
+      font-size: 0.9rem;
+      background: none;
+      border: none;
+      color: #0077cc;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 0.2rem;
+    }
+
+    .abstract-toggle:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header class="main-nav">
@@ -16,89 +46,58 @@
       <li><a href="experience.html" class="nav-link">Experience</a></li>
       <li><a href="research.html" class="nav-link">Research</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li><a href="publications.html" class="nav-link active">Publications</a></li>
       <li><a href="cv.html" class="nav-link">CV</a></li>
-      <li><button id="themeToggle" style="padding: 0.4rem 0.8rem; border-radius: 4px;">🌓 Mode</button></li>
+      <li><button id="themeToggle">🌓 Mode</button></li>
     </ul>
   </header>
 
   <div class="container">
     <section class="intro">
       <h1>Publications</h1>
-      <p>A categorized selection of my academic publications across various venues.</p>
-    </section>
-
-    <!-- Journals -->
-    <section class="contact" data-aos="fade-up">
-      <h2>Journal Articles</h2>
-      <p>(Coming soon)</p>
+      <p>Below is a categorized list of my academic publications.</p>
     </section>
 
     <!-- Conference Proceedings -->
     <section class="contact" data-aos="fade-up">
       <h2>Conference Proceedings</h2>
-      <div class="publication-entry">
-        <h3>
+      <ol class="publication-list">
+        <li>
           <a href="https://example.com/paper-link" target="_blank">
             Graph Neural Networks in Life Sciences: Opportunities and Solutions
-          </a>
-        </h3>
-        <p>
+          </a><br />
           <strong>Haleem Halar</strong>, Zichen Wang, Vassilis N Ioannidis, Huzefa Rangwala, 
-          Tatsuya Arai, Ryan Brand, Mufei Li, Yohei Nakayama
-        </p>
-        <p><em>Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022</em></p>
-        <button class="abstract-toggle">[Abstract]</button>
-        <div class="abstract-text" style="display: none;">
-          <p>This paper discusses the application of graph neural networks (GNNs) in life sciences, focusing on structural data modeling, challenges with interpretability, and approaches to ensure biological relevance.</p>
-        </div>
-      </div>
-
-      <div class="publication-entry">
-        <h3>
-          <a href="https://example.com/paper-link" target="_blank">
-            Graph Neural Networks in Life Sciences: Opportunities and Solutions
-          </a>
-        </h3>
-        <p>
-          <strong>Haleem Halar</strong>, Zichen Wang, Vassilis N Ioannidis, Huzefa Rangwala, 
-          Tatsuya Arai, Ryan Brand, Mufei Li, Yohei Nakayama
-        </p>
-        <p><em>Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022</em></p>
-        <button class="abstract-toggle">[Abstract]</button>
-        <div class="abstract-text" style="display: none;">
-          <p>This paper discusses the application of graph neural networks (GNNs) in life sciences, focusing on structural data modeling, challenges with interpretability, and approaches to ensure biological relevance.</p>
-        </div>
-      </div>
-
-      <div class="publication-entry">
-        <h3>
-          <a href="https://example.com/paper-link" target="_blank">
-            Graph Neural Networks in Life Sciences: Opportunities and Solutions
-          </a>
-        </h3>
-        <p>
-          <strong>Haleem Halar</strong>, Zichen Wang, Vassilis N Ioannidis, Huzefa Rangwala, 
-          Tatsuya Arai, Ryan Brand, Mufei Li, Yohei Nakayama
-        </p>
-        <p><em>Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022</em></p>
-        <button class="abstract-toggle">[Abstract]</button>
-        <div class="abstract-text" style="display: none;">
-          <p>This paper discusses the application of graph neural networks (GNNs) in life sciences, focusing on structural data modeling, challenges with interpretability, and approaches to ensure biological relevance.</p>
-        </div>
-      </div>
+          Tatsuya Arai, Ryan Brand, Mufei Li, Yohei Nakayama<br />
+          <em>Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022</em><br />
+          <button class="abstract-toggle">[Abstract]</button>
+          <div class="abstract-text">
+            This paper discusses the application of graph neural networks (GNNs) in life sciences, focusing on structural data modeling, challenges with interpretability, and approaches to ensure biological relevance.
+          </div>
+        </li>
+        <!-- Add more <li> items for more papers -->
+      </ol>
     </section>
 
-    <!-- Workshops -->
+    <!-- Other categories -->
+    <section class="contact" data-aos="fade-up">
+      <h2>Journals</h2>
+      <ol class="publication-list">
+        <li>(To be added)</li>
+      </ol>
+    </section>
+
     <section class="contact" data-aos="fade-up">
       <h2>Workshops</h2>
-      <p>(Coming soon)</p>
+      <ol class="publication-list">
+        <li>(To be added)</li>
+      </ol>
     </section>
 
-    <!-- Book Chapters -->
     <section class="contact" data-aos="fade-up">
       <h2>Book Chapters</h2>
-      <p>(Coming soon)</p>
+      <ol class="publication-list">
+        <li>(To be added)</li>
+      </ol>
     </section>
   </div>
 
@@ -107,17 +106,18 @@
   </footer>
 
   <script>
-    // Highlight current page
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
-    const currentPath = window.location.pathname.split('/').pop();
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.classList.add('active');
-      }
-    });
-
-    // Theme toggle
+    // Abstract toggle logic
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.abstract-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const abstract = btn.nextElementSibling;
+          const visible = abstract.style.display === 'block';
+          abstract.style.display = visible ? 'none' : 'block';
+          btn.textContent = visible ? '[Abstract]' : '[Hide Abstract]';
+        });
+      });
+
+      // Theme toggle
       const toggle = document.getElementById('themeToggle');
       if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
@@ -128,27 +128,15 @@
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
 
-      // Abstract toggle functionality
-      const toggles = document.querySelectorAll('.abstract-toggle');
-      toggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const abs = btn.nextElementSibling;
-          if (abs.style.display === "none") {
-            abs.style.display = "block";
-            btn.textContent = "[Hide Abstract]";
-          } else {
-            abs.style.display = "none";
-            btn.textContent = "[Abstract]";
-          }
-        });
+      // Active nav highlight
+      const navLinks = document.querySelectorAll('.main-nav ul li a');
+      const currentPath = window.location.pathname.split('/').pop();
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        }
       });
     });
-  </script>
-
-  <!-- AOS Animation -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
   </script>
 </body>
 </html>
