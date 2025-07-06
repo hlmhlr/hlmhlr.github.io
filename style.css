@@ -477,15 +477,6 @@ body.dark-mode .abstract-text {
 
 
 
-
-
-
-
-
-
-
-
-
 .news {
   background-color: #e3e8ef;
   padding: 1.5rem;
@@ -501,7 +492,7 @@ body.dark-mode .abstract-text {
 
 .news-container {
   height: 220px;                  /* Show approx 4 items */
-  overflow-y: auto;              /* Manual scroll */
+  overflow-y: auto;              /* Manual scroll enabled */
   position: relative;
 }
 
@@ -509,7 +500,7 @@ body.dark-mode .abstract-text {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  animation: scrollNews 25s linear infinite; /* Auto scroll */
+  animation: scrollNews 25s linear infinite;
 }
 
 .news-list li {
@@ -518,7 +509,7 @@ body.dark-mode .abstract-text {
   color: #333;
 }
 
-/* Optional: pause animation when hovered */
+/* Pause on hover */
 .news-container:hover .news-list {
   animation-play-state: paused;
 }
@@ -529,7 +520,7 @@ body.dark-mode .abstract-text {
   100% { transform: translateY(-50%); }
 }
 
-/* Dark mode styles */
+/* Dark mode support */
 body.dark-mode .news {
   background-color: #1e1e2f;
 }
@@ -537,3 +528,4 @@ body.dark-mode .news {
 body.dark-mode .news-list li {
   color: #ddd;
 }
+
