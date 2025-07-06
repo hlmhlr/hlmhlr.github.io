@@ -471,3 +471,47 @@ body.dark-mode .abstract-text {
   border-left-color: #555;
 }
 
+
+
+
+.news-slider {
+  height: 3rem; /* Adjust based on text height */
+  overflow: hidden;
+  position: relative;
+  background-color: var(--card-bg, #f9f9f9);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: slideNews 12s linear infinite;
+}
+
+.news-list li {
+  height: 3rem; /* Same as slider height */
+  line-height: 3rem;
+  white-space: nowrap;
+}
+
+/* Dark mode support */
+body.dark-mode .news-slider {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Animation */
+@keyframes slideNews {
+  0%   { transform: translateY(0%); }
+  25%  { transform: translateY(-100%); }
+  50%  { transform: translateY(-200%); }
+  75%  { transform: translateY(-300%); }
+  100% { transform: translateY(0%); }
+}
+
+
+.news-slider:hover .news-list {
+  animation-play-state: paused;
+}
