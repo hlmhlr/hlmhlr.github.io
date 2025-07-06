@@ -25,38 +25,46 @@
   <div class="container">
     <section class="intro">
       <h1>Publications</h1>
-      <p>A categorized selection of my publications in NLP, AI, and related fields.</p>
+      <p>A categorized selection of my academic publications across various venues.</p>
     </section>
 
+    <!-- Journals -->
     <section class="contact" data-aos="fade-up">
-      
       <h2>Journal Articles</h2>
-      <ol>
-        <li><a href="#">"Deep Neural Simplification for Legal Texts"</a> – Journal of AI Research, 2023</li>
-        <li><a href="#">"Multilingual Transformers in Real-World Applications"</a> – AI & Society, 2022</li>
-      </ol>
+      <p>(Coming soon)</p>
+    </section>
 
+    <!-- Conference Proceedings -->
+    <section class="contact" data-aos="fade-up">
       <h2>Conference Proceedings</h2>
-      <ol>
-        <li><a href="#">"Towards Interpretable Neural Text Simplification"</a> – ACL 2024</li>
-        <li><a href="#">"Cross-modal Transformers for Image-Caption Alignment"</a> – NeurIPS 2023</li>
-        <li><a href="#">"Bias and Fairness in Language Models"</a> – EMNLP 2022</li>
-        <li><a href="#">"Knowledge Distillation for Multilingual Models"</a> – ACL 2021</li>
-      </ol>
+      <div class="publication-entry">
+        <h3>
+          <a href="https://example.com/paper-link" target="_blank">
+            Graph Neural Networks in Life Sciences: Opportunities and Solutions
+          </a>
+        </h3>
+        <p>
+          <strong>Haleem Halar</strong>, Zichen Wang, Vassilis N Ioannidis, Huzefa Rangwala, 
+          Tatsuya Arai, Ryan Brand, Mufei Li, Yohei Nakayama
+        </p>
+        <p><em>Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022</em></p>
+        <button class="abstract-toggle">[Abstract]</button>
+        <div class="abstract-text" style="display: none;">
+          <p>This paper discusses the application of graph neural networks (GNNs) in life sciences, focusing on structural data modeling, challenges with interpretability, and approaches to ensure biological relevance.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Workshops -->
+    <section class="contact" data-aos="fade-up">
       <h2>Workshops</h2>
-      <ol>
-        <li><a href="#">"Interactive Learning in Dialogue Systems"</a> – NAACL Workshop on Conversational AI, 2023</li>
-        <li><a href="#">"Evaluating LLMs in Multimodal Contexts"</a> – ICLR Workshop on Foundation Models, 2022</li>
-      </ol>
+      <p>(Coming soon)</p>
+    </section>
 
+    <!-- Book Chapters -->
+    <section class="contact" data-aos="fade-up">
       <h2>Book Chapters</h2>
-      <ol>
-        <li><a href="#">"AI Ethics and Regulation"</a> – In *AI and the Future of Work*, Springer, 2024</li>
-        <li><a href="#">"Natural Language Understanding in Low-resource Languages"</a> – In *Advances in NLP*, Elsevier, 2023</li>
-      </ol>
-
-      <p>For a full list of publications, visit my <a href="#">Google Scholar profile</a>.</p>
+      <p>(Coming soon)</p>
     </section>
   </div>
 
@@ -64,8 +72,8 @@
     <p>&copy; 2025 Haleem Halar</p>
   </footer>
 
-  <!-- Highlight active nav -->
   <script>
+    // Highlight current page
     const navLinks = document.querySelectorAll('.main-nav ul li a');
     const currentPath = window.location.pathname.split('/').pop();
     navLinks.forEach(link => {
@@ -73,20 +81,8 @@
         link.classList.add('active');
       }
     });
-  </script>
 
-  <!-- AOS Animations -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  </script>
-
-  <!-- Theme toggle -->
-  <script>
+    // Theme toggle
     document.addEventListener("DOMContentLoaded", function () {
       const toggle = document.getElementById('themeToggle');
       if (localStorage.getItem('theme') === 'dark') {
@@ -97,7 +93,28 @@
         const isDark = document.body.classList.contains('dark-mode');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
+
+      // Abstract toggle functionality
+      const toggles = document.querySelectorAll('.abstract-toggle');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const abs = btn.nextElementSibling;
+          if (abs.style.display === "none") {
+            abs.style.display = "block";
+            btn.textContent = "[Hide Abstract]";
+          } else {
+            abs.style.display = "none";
+            btn.textContent = "[Abstract]";
+          }
+        });
+      });
     });
+  </script>
+
+  <!-- AOS Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
   </script>
 </body>
 </html>
