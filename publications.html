@@ -10,31 +10,51 @@
 </head>
 <body>
   <header class="main-nav">
-  <ul>
-    <li><a href="index.html" class="nav-link">Home</a></li>
-    <li><a href="education.html" class="nav-link">Education</a></li>
-    <li><a href="experience.html" class="nav-link">Experience</a></li>
-    <li><a href="research.html" class="nav-link">Research</a></li>
-    <li><a href="projects.html" class="nav-link">Projects</a></li>
-    <li><a href="publications.html" class="nav-link">Publications</a></li>
-    <li><a href="cv.html" class="nav-link">CV</a></li>
-    <li><button id="themeToggle" style="padding: 0.4rem 0.8rem; border-radius: 4px;">🌓 Mode</button></li>
-  </ul>
-</header>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="education.html" class="nav-link">Education</a></li>
+      <li><a href="experience.html" class="nav-link">Experience</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li><a href="cv.html" class="nav-link">CV</a></li>
+      <li><button id="themeToggle" style="padding: 0.4rem 0.8rem; border-radius: 4px;">🌓 Mode</button></li>
+    </ul>
+  </header>
 
   <div class="container">
     <section class="intro">
       <h1>Publications</h1>
-      <p>Here is a selection of my academic publications in the areas of NLP, AI, and ML.</p>
+      <p>A categorized selection of my publications in NLP, AI, and related fields.</p>
     </section>
 
     <section class="contact" data-aos="fade-up">
-      <ul>
-        <li><strong>"Towards Interpretable Neural Text Simplification"</strong> – ACL 2024</li>
-        <li><strong>"Cross-modal Transformers for Image-Caption Alignment"</strong> – NeurIPS 2023</li>
-        <li><strong>"Bias and Fairness in Language Models"</strong> – EMNLP 2022</li>
-        <li><strong>"Knowledge Distillation for Multilingual Models"</strong> – ACL 2021</li>
-      </ul>
+      
+      <h2>Journal Articles</h2>
+      <ol>
+        <li><a href="#">"Deep Neural Simplification for Legal Texts"</a> – Journal of AI Research, 2023</li>
+        <li><a href="#">"Multilingual Transformers in Real-World Applications"</a> – AI & Society, 2022</li>
+      </ol>
+
+      <h2>Conference Proceedings</h2>
+      <ol>
+        <li><a href="#">"Towards Interpretable Neural Text Simplification"</a> – ACL 2024</li>
+        <li><a href="#">"Cross-modal Transformers for Image-Caption Alignment"</a> – NeurIPS 2023</li>
+        <li><a href="#">"Bias and Fairness in Language Models"</a> – EMNLP 2022</li>
+        <li><a href="#">"Knowledge Distillation for Multilingual Models"</a> – ACL 2021</li>
+      </ol>
+
+      <h2>Workshops</h2>
+      <ol>
+        <li><a href="#">"Interactive Learning in Dialogue Systems"</a> – NAACL Workshop on Conversational AI, 2023</li>
+        <li><a href="#">"Evaluating LLMs in Multimodal Contexts"</a> – ICLR Workshop on Foundation Models, 2022</li>
+      </ol>
+
+      <h2>Book Chapters</h2>
+      <ol>
+        <li><a href="#">"AI Ethics and Regulation"</a> – In *AI and the Future of Work*, Springer, 2024</li>
+        <li><a href="#">"Natural Language Understanding in Low-resource Languages"</a> – In *Advances in NLP*, Elsevier, 2023</li>
+      </ol>
 
       <p>For a full list of publications, visit my <a href="#">Google Scholar profile</a>.</p>
     </section>
@@ -44,44 +64,40 @@
     <p>&copy; 2025 Haleem Halar</p>
   </footer>
 
-<script>
-  // Highlight the current page link
-  const navLinks = document.querySelectorAll('.main-nav ul li a');
-  const currentPath = window.location.pathname.split('/').pop();
+  <!-- Highlight active nav -->
+  <script>
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+    const currentPath = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  </script>
 
-  navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    }
-  });
-</script>
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById('themeToggle');
+  <!-- AOS Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
 
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
-    if (toggle) {
+  <!-- Theme toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById('themeToggle');
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
       toggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
-    }
-  });
-</script>
-
+    });
+  </script>
 </body>
 </html>
