@@ -9,9 +9,15 @@
 </head>
 
 <body>
+  <div style="text-align: right; padding: 1rem;">
+    <button id="darkModeToggle" style="padding: 0.5rem 1rem; border-radius: 5px; background-color: #444; color: white; border: none; cursor: pointer;">
+        Toggle Dark Mode
+    </button>
+  </div>
+
   <div class="container">
     <h1>All News</h1>
-    <ul class="news-list">
+    <ul class="news-list no-scroll">
       <li><strong>June 2025:</strong> Our collaborative research with <em>Georgia Southern University, USA</em> has been accepted for publication in the prestigious <em>IEEE Journal on Selected Areas in Communications (JSAC)</em>.</li>
 
       <li><strong>March 2025:</strong> Published a joint paper in collaboration with the <em>Center for Ubiquitous Computing (UBICOMP), University of Oulu, Finland</em> in the <em>IEEE Transactions on Learning Technologies</em>.</li>
@@ -30,15 +36,22 @@
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 
-  <script>
-  // Automatically apply dark mode if stored
-  document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
-    }
-  });
-</script>
 
+
+    <script>
+    // Apply theme on load
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        }
+
+        document.getElementById("darkModeToggle").addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+        localStorage.setItem("theme", newTheme);
+        });
+    });
+    </script>
 
 </body>
 </html>

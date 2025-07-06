@@ -610,4 +610,10 @@ body.dark-mode .news-list li {
 }
 
 
+/* Disable animation for full news page */
+.news-list.no-scroll {
+  animation: none !important;
+}
+
+
 
