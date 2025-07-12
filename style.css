@@ -621,62 +621,85 @@ body.dark-mode .news-list li {
 /* ------------------ Format style for project cards  */
 .projects-section {
   padding: 2rem;
-  background-color: #f5f7fb;
+  background-color: #f9fafe;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .project-card {
   display: flex;
   flex-wrap: wrap;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .project-media {
   flex: 1 1 300px;
   max-width: 400px;
+  overflow: hidden;
 }
 
 .project-media img,
 .project-media video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .project-details {
   flex: 2 1 400px;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-details h3 {
   margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
   color: #222;
 }
 
 .project-details p {
-  color: #555;
+  margin: 0 0 0.8rem;
+  color: #444;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .project-links a {
-  display: inline-block;
-  margin-right: 1rem;
-  margin-top: 0.5rem;
   color: #0077b5;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+.project-links a i {
+  margin-right: 6px;
 }
 
 .project-links a:hover {
-  text-decoration: underline;
+  color: #005f8e;
 }
 
-/* Dark mode support */
+/* Dark Mode */
 body.dark-mode .projects-section {
   background-color: #1e1e2f;
 }
@@ -688,5 +711,9 @@ body.dark-mode .project-card {
 body.dark-mode .project-details h3,
 body.dark-mode .project-details p,
 body.dark-mode .project-links a {
-  color: #ddd;
+  color: #e0e0e0;
+}
+
+body.dark-mode .project-links a:hover {
+  color: #63c1ff;
 }
