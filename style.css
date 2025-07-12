@@ -728,3 +728,31 @@ body.dark-mode .read-more-toggle {
 body.dark-mode .read-more-toggle:hover {
   color: #b3e5ff;
 }
+
+
+/* ---------------------------------------- Lightbox overlay style for media clickable*/
+#lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#lightboxOverlay img,
+#lightboxOverlay video {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Optional: show pointer cursor on hover */
+.media-clickable {
+  cursor: zoom-in;
+}

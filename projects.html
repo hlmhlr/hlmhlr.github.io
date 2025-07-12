@@ -75,9 +75,9 @@
     </div>
   </div>
 
-    <!-- Project 2 -->
+    <!-- Project 3 -->
   <div class="project-card">
-    <div class="project-media">
+    <div class="project-media media-clickable">
       <img src="media/road_seg_vid.gif" alt="eHealth Monitoring System">
     </div>
     <div class="project-details">
@@ -401,6 +401,29 @@
         });
         });
     });
+    </script>
+
+    <!-- Lightbox Overlay Container -->
+    <div id="lightboxOverlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('lightboxOverlay');
+
+            document.querySelectorAll('.media-clickable img, .media-clickable video').forEach(media => {
+            media.addEventListener('click', () => {
+                const clone = media.cloneNode(true);
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+            });
+
+            overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            overlay.innerHTML = '';
+            });
+        });
     </script>
 
 </body>
