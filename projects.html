@@ -60,12 +60,14 @@
     </div>
     <div class="project-details">
       <h3>eHealth Monitoring System addition detailed topic</h3>
-      <p>Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
+      <p class="project-description">
+        Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
       </p>
+      <a href="#" class="read-more-toggle">Read more</a>
       <div class="project-links">
         <a href="https://github.com/your-ehealth-repo" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         <a href="publications.html#ehealth" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
@@ -173,5 +175,21 @@
       document.body.classList.add('loaded');
     });
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggles = document.querySelectorAll('.read-more-toggle');
+
+        toggles.forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            const desc = this.previousElementSibling;
+            desc.classList.toggle('expanded');
+            this.textContent = desc.classList.contains('expanded') ? 'Show less' : 'Read more';
+        });
+        });
+    });
+    </script>
+
 </body>
 </html>

@@ -644,6 +644,7 @@ body.dark-mode .news-list li {
 .project-media {
   flex: 1 1 300px;
   max-width: 400px;
+  height: 200px; /* Fixed height */
   overflow: hidden;
 }
 
@@ -654,6 +655,7 @@ body.dark-mode .news-list li {
   object-fit: cover;
   display: block;
 }
+
 
 .project-details {
   flex: 2 1 400px;
@@ -716,4 +718,41 @@ body.dark-mode .project-links a {
 
 body.dark-mode .project-links a:hover {
   color: #63c1ff;
+}
+
+
+
+/* Description with read more */
+.project-description {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.project-description.expanded {
+  max-height: 1000px; /* Arbitrary large number to allow full expansion */
+}
+
+.read-more-toggle {
+  display: inline-block;
+  color: #0077b5;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.read-more-toggle:hover {
+  color: #004c7f;
+}
+
+/* Dark Mode */
+body.dark-mode .read-more-toggle {
+  color: #66ccff;
+}
+
+body.dark-mode .read-more-toggle:hover {
+  color: #b3e5ff;
 }
