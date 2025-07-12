@@ -617,3 +617,76 @@ body.dark-mode .news-list li {
 
 
 
+
+/* ------------------ Format style for project cards  */
+.projects-section {
+  padding: 2rem;
+  background-color: #f5f7fb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.project-media {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-details {
+  flex: 2 1 400px;
+  padding: 1rem 1.5rem;
+}
+
+.project-details h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.project-details p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode support */
+body.dark-mode .projects-section {
+  background-color: #1e1e2f;
+}
+
+body.dark-mode .project-card {
+  background-color: #292945;
+}
+
+body.dark-mode .project-details h3,
+body.dark-mode .project-details p,
+body.dark-mode .project-links a {
+  color: #ddd;
+}
