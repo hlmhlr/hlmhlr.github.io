@@ -754,5 +754,5 @@ body.dark-mode .read-more-toggle:hover {
 
 /* Optional: show pointer cursor on hover */
 .media-clickable {
-  cursor: zoom-in;
+  cursor: pointer;
 }

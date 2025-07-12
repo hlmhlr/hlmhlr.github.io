@@ -85,9 +85,6 @@
       <p class="project-description">
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
         Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
-        Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
-        Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
-        Developed an AI-driven wearable system for detecting falls and monitoring elderly activities using sensor fusion and lightweight neural networks.
       </p>
       <a href="#" class="read-more-toggle">Read more</a>
       <div class="project-links">
@@ -97,7 +94,7 @@
     </div>
   </div>
 
-    <!-- Project 2 -->
+    <!-- Project 4 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -119,7 +116,7 @@
     </div>
   </div>
 
-    <!-- Project 2 -->
+    <!-- Project 5 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -142,7 +139,7 @@
   </div>
 
 
-    <!-- Project 2 -->
+    <!-- Project 6 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -165,7 +162,7 @@
   </div>
 
 
-    <!-- Project 2 -->
+    <!-- Project 7 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -188,7 +185,7 @@
   </div>
 
 
-    <!-- Project 2 -->
+    <!-- Project 8 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -212,7 +209,7 @@
 
 
 
-    <!-- Project 2 -->
+    <!-- Project 9 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -235,7 +232,7 @@
   </div>
 
 
-    <!-- Project 2 -->
+    <!-- Project 10 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -257,7 +254,7 @@
     </div>
   </div>
 
-    <!-- Project 2 -->
+    <!-- Project 11 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -279,7 +276,7 @@
     </div>
   </div>
 
-    <!-- Project 2 -->
+    <!-- Project 12 -->
   <div class="project-card">
     <div class="project-media">
       <img src="media/sample_img.png" alt="eHealth Monitoring System">
@@ -413,6 +410,11 @@
             document.querySelectorAll('.media-clickable img, .media-clickable video').forEach(media => {
             media.addEventListener('click', () => {
                 const clone = media.cloneNode(true);
+                if (clone.tagName.toLowerCase() === 'video') 
+                    {
+                    clone.setAttribute('controls', true);
+                    clone.setAttribute('autoplay', true);
+                    }
                 overlay.innerHTML = '';
                 overlay.appendChild(clone);
                 overlay.style.display = 'flex';
