@@ -932,24 +932,31 @@ body.dark-mode .social-icons a {
 
 .home-project-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1rem;
-/*  width: 100%;          /* Ensure full width */
- /* box-sizing: border-box; /* Include padding/border in width */
-  /*overflow-wrap: break-word; /* Prevent content overflow */ 
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1rem; /* smaller gap for closer cards */
+  max-width: 1200px; /* control max width */
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #f9f9fc; /* same as section bg or transparent */
+  border-radius: 12px;
 }
 
 .home-project-card {
-  /* background-color: white;
-  border-radius: 10px;
-  width: 280px;
-  padding: 1rem;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  background-color: transparent; /* no separate bg */
+  box-shadow: none; /* no shadow */
+  border-radius: 0; /* no round corners */
+  padding: 0.5rem 0;
   text-align: center;
-  text-align: center;
-  transition: transform 0.2s ease;*/
-  width: 100%; /* fill grid cell */
-  max-width: none; /* override any fixed max width */
+  border-bottom: 1px solid #ddd; /* subtle horizontal separators */
+  transition: background-color 0.3s ease;
+}
+
+.home-project-card:nth-child(3n) {
+  border-bottom: none; /* no border on every third card */
+}
+
+.home-project-card:hover {
+  background-color: #e0f0ff; /* subtle highlight on hover */
 }
 
 .home-project-card img {
@@ -957,19 +964,19 @@ body.dark-mode .social-icons a {
   height: 160px;
   object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .home-project-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
   color: #00acc1;
+  margin-bottom: 0.3rem;
 }
 
 .home-project-card p {
   font-size: 0.95rem;
   color: #444;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   text-align: justify;
 }
 
@@ -979,6 +986,25 @@ body.dark-mode .social-icons a {
   font-weight: 500;
   text-decoration: none;
 }
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .home-project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-project-card-container {
+    grid-template-columns: 1fr;
+  }
+  .home-project-card {
+    border-bottom: 1px solid #ddd; /* keep border for stacked */
+  }
+}
+
+
+
 
 .home-project-card:hover {
   transform: translateY(-4px);
