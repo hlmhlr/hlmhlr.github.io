@@ -902,13 +902,12 @@ body.dark-mode .social-icons a {
 /* ------------------ for projects section in the home page: Responsive layout */
 .home-featured-projects {
   background-color: #f9f9fc;
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left; /* Ensures contents are left-aligned */
 }
 
 .home-featured-projects h2 {
@@ -918,12 +917,22 @@ body.dark-mode .social-icons a {
   color: #222;
 }
 
+.home-featured-projects .section-heading {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  text-align: left; /* Ensures heading is aligned left */
+  color: #222;
+  font-size: 1.8rem;
+}
+
+
 .home-project-card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
+
 
 .home-project-card {
   background-color: white;
