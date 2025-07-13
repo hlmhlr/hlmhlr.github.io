@@ -1001,3 +1001,17 @@ body.dark-mode .view-link,
 body.dark-mode .home-featured-projects h2 {
   color: #eee;
 }
+
+
+
+
+/* ------------------ for particle background in the home page */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0f2027; /* You can change this color */
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
