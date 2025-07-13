@@ -1006,9 +1006,7 @@ body.dark-mode .social-icons a {
 
 
 
-.home-project-card:hover {
-  transform: translateY(-4px);
-}
+
 
 /* Dark mode compatibility */
 body.dark-mode .home-featured-projects {
