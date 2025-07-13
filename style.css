@@ -902,7 +902,7 @@ body.dark-mode .social-icons a {
 /* ------------------ for projects section in the home page: Responsive layout */
 .home-featured-projects {
   background-color: #f4f4f4;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
@@ -913,8 +913,8 @@ body.dark-mode .social-icons a {
 
 .home-featured-projects h2 {
   text-align: left;             /* Align title to the left */
-  margin-bottom: 1rem;          /* Reduce the gap */
-  margin-left: 0.5rem;          /* Small left padding for balance */
+  margin-bottom: 1.2rem;          /* Reduce the gap */
+  /*margin-left: 0.5rem;          Small left padding for balance */
   font-size: 1.8rem;
   color: #222;
 }
