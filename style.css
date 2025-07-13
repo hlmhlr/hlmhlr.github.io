@@ -1,5 +1,12 @@
 /* Developer Portfolio Style CSS for Haleem Halar */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -902,13 +909,15 @@ body.dark-mode .social-icons a {
 /* ------------------ for projects section in the home page: Responsive layout */
 .home-featured-projects {
   background-color: #f4f4f4;
+  max-width: 1200px;
   padding: 1rem 2rem;
   border-radius: 12px;
+  margin: 0 auto;
+  box-sizing: border-box;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
-  max-width: 1200px;
+  /*margin-bottom: 2rem;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .home-featured-projects h2 {
@@ -925,6 +934,9 @@ body.dark-mode .social-icons a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
+  width: 100%;          /* Ensure full width */
+  box-sizing: border-box; /* Include padding/border in width */
+  overflow-wrap: break-word; /* Prevent content overflow */
 }
 
 .home-project-card {
