@@ -922,10 +922,9 @@ body.dark-mode .social-icons a {
 
 
 .home-project-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: flex-start; /* Align project cards to the left */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .home-project-card {
