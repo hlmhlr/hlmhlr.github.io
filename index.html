@@ -296,5 +296,57 @@
   });
 </script>
 
+
+<script>
+  function loadParticles(isDarkMode) {
+    const config = isDarkMode ? {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4 },
+        size: { value: 3 },
+        line_linked: { enable: true, color: "#ffffff", opacity: 0.2 },
+        move: { speed: 1 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      },
+      background: { color: "#0f2027" }
+    } : {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#333333" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3 },
+        line_linked: { enable: true, color: "#888888", opacity: 0.2 },
+        move: { speed: 1 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      },
+      background: { color: "#f4f7fc" }
+    };
+
+    particlesJS("particles-js", config);
+  }
+
+  // Initial load based on body class
+  document.addEventListener("DOMContentLoaded", function () {
+    const isDark = document.body.classList.contains("dark-mode");
+    loadParticles(isDark);
+  });
+
+  // Optional: Watch for dark mode toggle (if you have a switch)
+  const observer = new MutationObserver(() => {
+    const isDark = document.body.classList.contains("dark-mode");
+    loadParticles(isDark);
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+</script>
+
+
 </body>
 </html>
