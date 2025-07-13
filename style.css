@@ -8,17 +8,17 @@
 
 
 /* ------------------ for particle background in the home page */
-/*#particles-js {
+#particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #0f2027; /* You can change this color */
-/*  z-index: -1;
+  z-index: -1;
   top: 0;
   left: 0;
 } */
 
-
+/*
 #particles-js {
   position: fixed;
   width: 100%;
@@ -31,12 +31,11 @@
 
 body {
   background-color: #f4f7fc; /* Light mode default */
-}
+/*}
 
 body.dark-mode {
   background-color: #0f2027; /* Dark mode fallback */
-}
-
+/*} */
 
 
 

@@ -228,57 +228,72 @@
 
 
   <!-- Initialize particles.js -->
-
-
-
-<script>
-  function loadParticles(isDarkMode) {
-    const config = isDarkMode ? {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.4 },
-        size: { value: 3 },
-        line_linked: { enable: true, color: "#ffffff", opacity: 0.2 },
-        move: { speed: 1 }
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
       },
-      interactivity: {
-        events: { onhover: { enable: true, mode: "repulse" } }
+      "color": {
+        "value": "#ffffff"
       },
-      background: { color: "#0f2027" }
-    } : {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#333333" },
-        shape: { type: "circle" },
-        opacity: { value: 0.2 },
-        size: { value: 3 },
-        line_linked: { enable: true, color: "#888888", opacity: 0.2 },
-        move: { speed: 1 }
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        }
       },
-      interactivity: {
-        events: { onhover: { enable: true, mode: "repulse" } }
+      "opacity": {
+        "value": 0.5,
+        "random": false
       },
-      background: { color: "#f4f7fc" }
-    };
-
-    particlesJS("particles-js", config);
-  }
-
-  // Initial load based on body class
-  document.addEventListener("DOMContentLoaded", function () {
-    const isDark = document.body.classList.contains("dark-mode");
-    loadParticles(isDark);
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 4,
+        "direction": "none",
+        "straight": false,
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 100
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
   });
-
-  // Optional: Watch for dark mode toggle (if you have a switch)
-  const observer = new MutationObserver(() => {
-    const isDark = document.body.classList.contains("dark-mode");
-    loadParticles(isDark);
-  });
-
-  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 </script>
 
 
